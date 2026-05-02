@@ -60,8 +60,13 @@ const getPostDetails = async (req,res)=>{
   })
 }
 
+const likePostController = async (req,res)=>{
+
+}
+
 module.exports = {
   createPostController,
   getPostcontroller,
-  getPostDetails
+  getPostDetails,
+  likePostController
 };
