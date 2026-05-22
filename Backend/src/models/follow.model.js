@@ -14,6 +14,14 @@ const followSchema = new mongoose.Schema({
         // ref: "users",
         // required: [true, "followee is required"],
         // unique: [true, "it should be unique"]
+    },
+    status:{
+        type: String,
+        default: "pending",
+        enum:{
+            values: ["active", "pending", "rejected"],
+            message: "Status can only be active, pending, rejected"
+        }
     }
 },
 {timestamps: true}
