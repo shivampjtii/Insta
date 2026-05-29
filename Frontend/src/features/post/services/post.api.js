@@ -13,3 +13,15 @@ export async function getFeed(){
         console.log(err);
     }
 }
+
+export async function createPost(imageFile, caption){
+    try{
+        const formData = new FormData();
+        formData.append("img", imageFile);
+        formData.append("caption", caption)
+        const response = await api.post("/api/posts", formData);
+        return response.data
+    }catch(err){
+        console.log(err);
+    }
+}
